@@ -1,0 +1,21 @@
+[settings]
+arch=armv8
+build_type=Release
+compiler=apple-clang
+compiler.cppstd=gnu17
+compiler.libcxx=libc++
+compiler.version=16
+os=Macos
+
+[tool_requires]
+!ninja/*:ninja/[*]
+#&:ccache/[*]
+ccache/[*]
+
+# Usar el de sistema
+#[platform_tool_requires]
+#ccache/4.10.2
+
+[conf]
+tools.cmake.cmaketoolchain:generator=Ninja
+
